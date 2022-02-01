@@ -1,0 +1,20 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_DB=cadastro"
+    container_name: postgres
+    networks:
+      - docker_network
+    ports:
+      - "5432:5432"
+    volumes:
+      - spring_data:/var/lib/postgres
+networks:
+  docker_network:
+    driver: bridge
+volumes:
+  spring_data:
