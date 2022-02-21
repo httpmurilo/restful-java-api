@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b611a0-7388-458c-97b6-9b9040901764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/model/Telefone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/murilo/user/JpaTests/UsuarioRepositoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/murilo/user/Model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/murilo/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/UserApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/murilo/user/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/murilo/user/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/murilo/user/model/Telefone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/model/Telefone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/murilo/user/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/murilo/user/model/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +81,7 @@
       <workItem from="1644281335589" duration="318000" />
       <workItem from="1645387649802" duration="1434000" />
       <workItem from="1645389110304" duration="2666000" />
-      <workItem from="1645440941841" duration="2239000" />
+      <workItem from="1645440941841" duration="7285000" />
     </task>
     <servers />
   </component>

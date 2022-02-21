@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class UsuarioController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Usuario> getById(@PathVariable Integer id) {
-        Usuario usuario = usuarioRepository.getById(id);
+        Usuario usuario = usuarioRepository.findById(id).get();
         return  ResponseEntity.ok(usuario);
     }
 
@@ -48,6 +47,10 @@ public class UsuarioController {
     }
 
     protected Usuario salvarUsuario(@RequestBody Usuario user) {
+        for(int pos = 0; pos < user.getTelefones().size(); pos ++) {
+            user.getTelefones().get(pos).setUsuario(user);
+        }
+
         return usuarioRepository.save(user);
     }
 

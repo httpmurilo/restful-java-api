@@ -1,10 +1,15 @@
 package io.murilo.user.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class Telefone {
+public class Telefone  implements Serializable {
+    private static final long serialVersionUID = 1L;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,7 +18,8 @@ public class Telefone {
     private String numero;
     //muitos telefones para um usuário
     @org.hibernate.annotations.ForeignKey(name = "usuario_id")
-    @ManyToOne
+    @ManyToOne(optional = false)
+    @JsonIgnore
     private Usuario usuario;
 
     public Integer getId() {

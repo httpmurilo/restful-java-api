@@ -19,7 +19,15 @@ public class Usuario implements Serializable {
     //um usuario tem uma lista de telefone
     //quando deletar um usuario remove todos os telefones
     @OneToMany(mappedBy = "usuario", orphanRemoval = true, cascade = CascadeType.ALL)
-    private List<Telefone> telefoneList = new ArrayList<Telefone>();
+    private List<Telefone> telefones = new ArrayList<>();
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
 
     public Integer getId() {
         return id;
