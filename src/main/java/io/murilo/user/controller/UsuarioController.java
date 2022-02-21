@@ -1,14 +1,12 @@
 package io.murilo.user.controller;
 
-import io.murilo.user.Model.Usuario;
+import io.murilo.user.model.Usuario;
 import io.murilo.user.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -30,4 +28,27 @@ public class UsuarioController {
         List<Usuario> usuarioList = usuarioRepository.findAll();
         return  new ResponseEntity<>(usuarioList, HttpStatus.OK);
     }
+
+    @PostMapping(value = "/")
+    public ResponseEntity<Usuario> postUser(@RequestBody Usuario user) {
+        Usuario savedUser = salvarUsuario(user);
+        return ResponseEntity.ok(savedUser);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<String> deleteById(@PathVariable Integer id) {
+        usuarioRepository.deleteById(id);
+        return  ResponseEntity.ok("Usuário deletado com sucesso");
+    }
+
+    @PutMapping(value = "/")
+    public ResponseEntity<Usuario> putUser(@RequestBody Usuario user) {
+        Usuario savedUser = salvarUsuario(user);
+        return ResponseEntity.ok(savedUser);
+    }
+
+    protected Usuario salvarUsuario(@RequestBody Usuario user) {
+        return usuarioRepository.save(user);
+    }
+
 }

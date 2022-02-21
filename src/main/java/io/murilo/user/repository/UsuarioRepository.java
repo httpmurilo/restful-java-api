@@ -1,6 +1,6 @@
 package io.murilo.user.repository;
 
-import io.murilo.user.Model.Usuario;
+import io.murilo.user.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
